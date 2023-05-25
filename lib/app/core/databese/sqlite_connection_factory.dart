@@ -1,10 +1,13 @@
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
+// ignore: depend_on_referenced_packages
 import 'package:synchronized/synchronized.dart';
 import 'package:todopro/app/core/databese/sqlite_migration_factory.dart';
 
 class SqliteConnectionFactory {
+  // ignore: constant_identifier_names
   static const _VERSION = 1;
+  // ignore: constant_identifier_names
   static const _DATABASE_NAME = 'TODO_PRO';
 
   static SqliteConnectionFactory? _instance;
