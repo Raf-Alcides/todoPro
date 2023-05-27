@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:todopro/app/core/databese/sqlite_adm_connection.dart';
+import 'package:todopro/app/core/ui/ui_config.dart';
 import 'package:todopro/app/modules/auth/auth_module.dart';
-import 'package:todopro/app/modules/auth/login/login_controller.dart';
-import 'package:todopro/app/modules/auth/login/login_page.dart';
-
 import 'modules/splash/splash_page.dart';
 
 class AppWidget extends StatefulWidget {
@@ -37,6 +34,7 @@ class _AppWidgetState extends State<AppWidget> {
        return MaterialApp(
         title: 'to_do Pro',
         initialRoute: '/login',
+        theme: UiConfig.theme,
         routes: {
           ...AuthModule().routers
         },

@@ -22,7 +22,7 @@ class TodoPage extends StatelessWidget {
           [
             Provider(create: (_) => Object()),
           ],
-          child: Builder(builder: (Context) => _page(context)),
+          child: Builder(builder: (context) => _page(context)),
     );
   }
 }
