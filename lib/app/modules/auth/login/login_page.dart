@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/button_list.dart';
 import 'package:flutter_signin_button/button_view.dart';
+import 'package:todopro/app/core/widget/todo_field.dart';
 import 'package:todopro/app/core/widget/todo_logo.dart';
 
 class LoginPage extends StatelessWidget {
@@ -29,9 +30,9 @@ class LoginPage extends StatelessWidget {
                     child: Form(
                       child: Column(
                         children: [
-                          TextFormField(),
+                          TodoField(label: 'E-mail'),
                           const SizedBox(height: 20),
-                          TextFormField(),
+                          TodoField(label: 'Senha', obscureText: true),
                           const SizedBox(height: 20),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -76,18 +77,20 @@ class LoginPage extends StatelessWidget {
                             text: 'Continue com o Google',
                             padding: const EdgeInsets.all(5),
                             shape: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide.none
-                            ),
+                                borderRadius: BorderRadius.circular(30),
+                                borderSide: BorderSide.none),
                             onPressed: () {},
                           ),
                           const SizedBox(height: 20),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                            const Text('Não tem Conta?'),
-                            TextButton(onPressed: () {}, child: const Text('Cadastra-se'))
-                          ],)
+                              const Text('Não tem Conta?'),
+                              TextButton(
+                                  onPressed: () {},
+                                  child: const Text('Cadastra-se'))
+                            ],
+                          )
                         ],
                       ),
                     ),
